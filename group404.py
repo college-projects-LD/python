@@ -1,0 +1,12 @@
+fname = input ('First Name Please: ')
+lname = input ('Last Name Please: ')
+jtitle = input ('what is your job? ')
+idnum = input ('ID Number Please: ')
+email = input ('Email Address: ')
+phone = input ('Phone Number: ')
+hair = input ('Hair Color: ')
+eye = input (' Eye Color: ')
+month = input ('What month were you hired? ')
+train = input ('Have you completed the Advanced Training Yes/No: ')
+print (' The ID card is \n' + lname.upper() + ', ' + fname.title() +'\n'+ jtitle.title() +'\n'
++ 'ID: ' + idnum + '\n' +'\n' + email.lower() +'\n' + phone )

@@ -1,0 +1,3 @@
+color = input ('could you tell me what your favorite color is?')
+food = input ('how aboutyour favorite food?')
+print(' so you like /color and /food')
