@@ -1,19 +1,27 @@
+from draw2d import \
+    start_drawing, draw_line, draw_oval, draw_arc, \
+    draw_rectangle, draw_polygon, draw_text, finish_drawing
+from tkinter import Canvas, Tk
+
 
 from random import randint
+def main():
+    # Width and height of the scene in pixels
+    scene_width = 800
+    scene_height = 500
 
-def drawCloud(): 
-    for i in range(1,16):  
-        size=randint(20,70)
-        xOffset=randint(-40,40)
-        yOffset=randint(-30,30)
-        ellipse(100+xOffset,100+yOffset,size,size)
-   
-def setup():
-    strokeWeight(12)
-    size(200,200)
-    background(111,170,252)
-    fill(255,255,255)
-    stroke(255,255,255)    
+    # Call the start_drawing function in the draw2d.py library
+    # which will open a window and create a canvas.
+    canvas = start_drawing("Scene", scene_width, scene_height)
+
+    # Call your drawing functions such
+    # as draw_sky and draw_ground here.
+    
     drawCloud()
 
-run()
+    # Call the finish_drawing function
+    # in the draw2d.py library.
+    finish_drawing(canvas)
+
+def drawCloud(): 
+    Canvas.create_oval(300, 300,600,600)
