@@ -1,11 +1,5 @@
 import random
 
-
-
-
-
-
-
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
     a word like "the", "a", "one", "two", "some", "many".
@@ -95,15 +89,12 @@ def get_verb(quantity, tense):
         words = ["will drink", "will eat", "will grow", "will laugh",
         "will think", "will run", "will sleep", "will talk",
         "will walk", "will write"]
-    word = random.choice(words)
-    return word
+    verb = random.choice(words)
+    return verb
 
 
 
-def main():
-    repeat = int(input('how many sentances do you want: '))
-
-    
+def main():    
     single_determiner = get_determiner(1)
     single_noun = get_noun(1)
     single_past_verb =  get_verb(1,'past')
@@ -111,6 +102,7 @@ def main():
     single_future_verb = get_verb
     plural_determiner = get_determiner
     plural_noun = get_noun
+    
 
     print(f'{single_determiner} {single_noun} {single_past_verb}')
 
