@@ -1,3 +1,6 @@
+from xml.dom.minidom import Element
+
+
 def make_periodic_table():
     periodic_table_dict = {
          #symbol, name, atomic_mass]
@@ -230,17 +233,14 @@ def compute_molar_mass(symbol_quantity_list, periodic_table_dict):
         # Get the atomic mass for the symbol from the dictionary.
         # Multiply the atomic mass by the quantity.
         # Add the product into the total mass.
-    for key, value in symbol_quantity_list:   
-        Esymbol = symbol_quantity_list[SYMBOL_INDEX]
-        quantity = symbol_quantity_list[QUANTITY_INDEX]
+    for symbol_list in symbol_quantity_list:   
+        Esymbol = symbol_list[SYMBOL_INDEX]
+        quantity = symbol_list[QUANTITY_INDEX]
         atomicMass = 0
-        
-        if Esymbol in periodic_table_dict:
-            atomicMass = periodic_table_dict[ATOMIC_MASS_INDEX]
-            totalMass = totalMass + (atomicMass * quantity)
-        else:
-            print('ERROR: no Element found')
-
+        element_attributes = periodic_table_dict[Esymbol]
+        atomicMass = element_attributes[ATOMIC_MASS_INDEX] * quantity
+        totalMass += atomicMass
+            
     # Return the total mass.
     return totalMass
 
@@ -265,9 +265,9 @@ def main():
     # Compute the number of moles in the sample.
     num_moles = chemMass / molarMass
     # Print the molar mass.
-    print(f'{molarMass} grams/mole')
+    print(f'the molar mass is {molarMass:.5f} grams/mole')
     # Print the number of moles.
-    print(f'{num_moles} moles')
+    print(f'there are {num_moles:.5f} moles')
 
 
 if __name__ == "__main__":
