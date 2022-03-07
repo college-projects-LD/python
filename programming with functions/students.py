@@ -61,47 +61,6 @@ def read_dict(filename, key_column_index):
 # Call main to start this program.
 if __name__ == "__main__":
     main()
-# import csv
-# def main():
-#     I_num_index = 0
-#     student_index = 1
-
-#     sudent_dict = read_dict("programming with functions\students.csv", I_num_index)
-
-#     s_key = int(input("please enter the Students I Number: "))
-
-
-#     if s_key in sudent_dict:
-#         print(f'{sudent_dict[s_key]} is found')
-#     else:
-#         print('No such Student')
-
-
-
-
-
-# def read_dict(filename, key_column_index):
-#     """Read the contents of a CSV file into a compound
-#     dictionary and return the dictionary.
-
-#     Parameters
-#         filename: the name of the CSV file to read.
-#         key_column_index: the index of the column
-#             to use as the keys in the dictionary.
-#     Return: a compound dictionary that contains
-#         the contents of the CSV file.
-#     """
-#     text_dict = {}
-
-#     with open(filename, "rt") as csv_file:
-#         reader = csv.reader(filename)
-
-#         next(reader)
-#         for row_list in reader:
-#             key = row_list[key_column_index]
-#             text_dict[key] = row_list
-
-#         return text_dict
 
 
 
