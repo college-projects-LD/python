@@ -1,11 +1,5 @@
 import random
 
-
-
-
-
-
-
 def get_determiner(quantity):
     """Return a randomly chosen determiner. A determiner is
     a word like "the", "a", "one", "two", "some", "many".
